@@ -10,12 +10,12 @@ With the help of the deep learning paradigm, many point cloud networks have been
 
 ## Overview
 <p align="center">
-  <img width="1200" src="https://github.com/ShiQiu0419/pnp-3d/blob/main/feature_refine.pdf">
+  <img width="1200" src="https://github.com/ShiQiu0419/pnp-3d/blob/main/feature_refine-1.png">
 </p> 
 
 ## Visualization
 <p align="center">
-  <img width="1200" src="https://github.com/ShiQiu0419/pnp-3d/blob/main/vis1.pdf">
+  <img width="1200" src="https://github.com/ShiQiu0419/pnp-3d/blob/main/vis1-1.png">
 </p> 
 
 ## Paper and Citation
