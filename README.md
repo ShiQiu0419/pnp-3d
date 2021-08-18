@@ -1,5 +1,5 @@
 # PnP-3D: 
-This repository is for PnP-3D introduced in the following paper:
+This repository is for PnP-3D introduced in the following [paper](https://arxiv.org/abs/2108.07378):
  
 "PnP-3D: A Plug-and-Play for 3D Point Clouds"  
 [Shi Qiu](https://shiqiu0419.github.io/), [Saeed Anwar](https://saeed-anwar.github.io/), [Nick Barnes](http://users.cecs.anu.edu.au/~nmb/)  
