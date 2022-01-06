@@ -2,7 +2,7 @@
 This is a **pytorch** implementation of PnP-3D module.
 
 ## Note
-* Although we use [knn](https://github.com/ShiQiu0419/pnp-3d/blob/4e516ed750d0764176cd6f50dff4194f0905607f/pytorch/pnp3d.py#L37) in these sample codes, you may simply replace it with other searching algorithm/neighbor indices.
+* Although we use [knn](https://github.com/ShiQiu0419/pnp-3d/blob/4e516ed750d0764176cd6f50dff4194f0905607f/pytorch/pnp3d.py#L37) in these sample codes, you may simply replace it with other searching algorithm like ball query, or directly use the available neighbor indices.
 * It's better to place PnP-3D module behind the encoder in your network, but an optimal value of *k* may vary case by case. 
 
 ## Usage
