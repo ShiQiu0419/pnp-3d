@@ -100,7 +100,7 @@ class PnP3D(nn.Module):
         self.bn_up = nn.BatchNorm1d(input_features_dim)
 
     def forward(self, xyz, features, k):
-
+        # Local Context fusion
         neighbor_xyz, neighbor_feat = get_neighbors(xyz, features, k=k)
 
         neighbor_xyz = F.relu(self.bn_mlp1(self.conv_mlp1(neighbor_xyz))) # B,C/2,N,k
@@ -109,6 +109,7 @@ class PnP3D(nn.Module):
         f_encoding = torch.cat((neighbor_xyz, neighbor_feat), dim=1) # B,C,N,k
         f_encoding = f_encoding.max(dim=-1, keepdim=False)[0] # B,C,N
 
+        # Global Bilinear Regularization
         f_encoding_1 = F.relu(self.conv_down1(f_encoding)) # B,C/8,N
         f_encoding_2 = F.relu(self.conv_down2(f_encoding)) # B,C/8,N
 
@@ -121,6 +122,7 @@ class PnP3D(nn.Module):
 
         f_out = f_encoding-final_encoding
 
+        # Mish Activation
         f_out = self.mish(f_out)
 
         return f_out
