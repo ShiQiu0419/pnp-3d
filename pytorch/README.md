@@ -7,7 +7,7 @@ This is a **pytorch** implementation of PnP-3D module.
 
 ## Usage
 * Classification: [DGCNN](https://github.com/WangYueFt/dgcnn/blob/master/pytorch/model.py), [PointNet++](https://github.com/yanx27/Pointnet_Pointnet2_pytorch/blob/master/models/pointnet2_cls_ssg.py), etc.
-* Segmentation: [PointNet++](https://github.com/yanx27/Pointnet_Pointnet2_pytorch/blob/master/models/pointnet2_sem_seg.py), [CloserLook3D](https://github.com/zeliu98/CloserLook3D/blob/master/pytorch/models/backbones/resnet.py)
-* Detection: [ImVoteNet](https://github.com/facebookresearch/imvotenet/blob/main/models/backbone_module.py)
+* Segmentation: [PointNet++](https://github.com/yanx27/Pointnet_Pointnet2_pytorch/blob/master/models/pointnet2_sem_seg.py), [CloserLook3D](https://github.com/zeliu98/CloserLook3D/blob/master/pytorch/models/backbones/resnet.py), etc.
+* Detection: [ImVoteNet](https://github.com/facebookresearch/imvotenet/blob/main/models/backbone_module.py), etc.
 
 Open an issue if you have any question (need any suggestion) about the specific experimental setting.  
