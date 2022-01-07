@@ -45,3 +45,8 @@ def conv2d_simple(inputs,
         return outputs
 ```
 * Step 2. Copy the functions ```def mish``` and ```def PnP3D``` in [pnp3d.py](https://github.com/ShiQiu0419/pnp-3d/blob/main/tensorflow/pnp3d.py), then put them inside of [RandLANet.py](https://github.com/QingyongHu/RandLA-Net/blob/master/RandLANet.py)'s ```class Network```.
+* Step 3. Put the following line:
+```
+f_encoder_i = self.pnp3d_module(f_encoder_i, inputs['xyz'][i], inputs['neigh_idx'][i], 'PnP3D_layer_' + str(i), is_training)
+```
+behind [this line](**https://github.com/QingyongHu/RandLA-Net/blob/6b5445f5f279d33d2335e85ed39ca8b68cb1c57e/RandLANet.py#L115**).
