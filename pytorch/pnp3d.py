@@ -93,8 +93,8 @@ class PnP3D(nn.Module):
         self.conv_mlp2 = nn.Conv2d(input_features_dim*2, input_features_dim // 2, 1)
         self.bn_mlp2 = nn.BatchNorm2d(input_features_dim // 2)
 
-        self.conv_down1 = nn.Conv1d(input_features_dim, input_features_dim // 8, 1)
-        self.conv_down2 = nn.Conv1d(input_features_dim, input_features_dim // 8, 1)
+        self.conv_down1 = nn.Conv1d(input_features_dim, input_features_dim // 8, 1, bias=False)
+        self.conv_down2 = nn.Conv1d(input_features_dim, input_features_dim // 8, 1, bias=False)
 
         self.conv_up = nn.Conv1d(input_features_dim // 8, input_features_dim, 1)
         self.bn_up = nn.BatchNorm1d(input_features_dim)
