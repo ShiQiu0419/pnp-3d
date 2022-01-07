@@ -54,7 +54,7 @@ f_encoder_i = self.pnp3d_module(f_encoder_i, inputs['xyz'][i], inputs['neigh_idx
 ## SCF-Net Usage
 * Step 1. Create a linear mapping function ```def conv2d_simple``` in [helper_tf_util.py](https://github.com/leofansq/SCF-Net/blob/main/helper_tf_util.py)
 * Step 2. Copy the functions ```def mish``` and ```def PnP3D``` in [pnp3d.py](https://github.com/ShiQiu0419/pnp-3d/blob/main/tensorflow/pnp3d.py), then put them inside of ```class Network``` in [SCFNet.py](https://github.com/leofansq/SCF-Net/blob/main/SCFNet.py).
-* Step 3. Put the following line behind each *dilated_res_block* in SCF-Net (i.e., behind [this line](https://github.com/leofansq/SCF-Net/blob/a20343648594447ab5c31924f962cb0fc7bbd129/SCFNet.py#L117)):
+* Step 3. Put the following line behind each *scf_module* in SCF-Net (i.e., behind [this line](https://github.com/leofansq/SCF-Net/blob/a20343648594447ab5c31924f962cb0fc7bbd129/SCFNet.py#L117)):
 ```
 f_encoder_i = self.pnp3d_module(f_encoder_i, inputs['xyz'][i], inputs['neigh_idx'][i], 'PnP3D_layer_' + str(i), is_training)
 ```
