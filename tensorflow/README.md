@@ -44,12 +44,4 @@ def conv2d_simple(inputs,
                                padding=padding)
         return outputs
 ```
-* Step 2. In the network file, [RandLANet.py](https://github.com/QingyongHu/RandLA-Net/blob/master/RandLANet.py), create a mish function as:
-```
-def mish(x):
-    return x*tf.math.tanh(tf.math.softplus(x))
-```
-and create PnP-3D module as:
-```
-
-```
+* Step 2. Copy the functions ```def mish``` and ```def PnP3D``` in [pnp3d.py](https://github.com/ShiQiu0419/pnp-3d/blob/main/tensorflow/pnp3d.py), then paste them into [RandLANet.py](https://github.com/QingyongHu/RandLA-Net/blob/master/RandLANet.py).
