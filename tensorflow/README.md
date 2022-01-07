@@ -44,4 +44,4 @@ def conv2d_simple(inputs,
                                padding=padding)
         return outputs
 ```
-* Step 2. Copy the functions ```def mish``` and ```def PnP3D``` in [pnp3d.py](https://github.com/ShiQiu0419/pnp-3d/blob/main/tensorflow/pnp3d.py), then paste them into ```class Network``` of [RandLANet.py](https://github.com/QingyongHu/RandLA-Net/blob/master/RandLANet.py).
+* Step 2. Copy the functions ```def mish``` and ```def PnP3D``` in [pnp3d.py](https://github.com/ShiQiu0419/pnp-3d/blob/main/tensorflow/pnp3d.py), then put them inside of [RandLANet.py](https://github.com/QingyongHu/RandLA-Net/blob/master/RandLANet.py)'s ```class Network```.
