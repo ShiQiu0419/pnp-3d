@@ -12,7 +12,7 @@ import helper_tf_util
 def mish(x):
     return x*tf.math.tanh(tf.math.softplus(x))
 
-def PnP3D(self, feature, xyz, neigh_idx, name, is_training):
+def pnp3d_module(self, feature, xyz, neigh_idx, name, is_training):
     d_out = feature.get_shape()[-1].value
     batch_size = tf.shape(feature)[0]
     num_points = tf.shape(feature)[1]
