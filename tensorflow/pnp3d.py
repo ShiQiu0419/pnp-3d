@@ -18,7 +18,7 @@ def pnp3d_module(self, feature, xyz, neigh_idx, name, is_training):
     batch_size = tf.shape(feature)[0]
     num_points = tf.shape(feature)[1]
 
-    # for RandLA-Net, we only use half of the searched neighbors in PnP-3D
+    # In PnP-3D, we only use half of the searched neighbors from original RandLA-Net
     neigh_idx = neigh_idx[:,:,:tf.shape(neigh_idx)[-1]//2]
 
     # Local Context fusion
