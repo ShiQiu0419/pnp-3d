@@ -1,3 +1,14 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+@Author: Shi Qiu
+@Contact: shi.qiu@anu.edu.au
+@Time: 2021/01/06
+"""
+import tensorflow as tf
+import numpy as np
+import helper_tf_util
+
 def mish(x):
     return x*tf.math.tanh(tf.math.softplus(x))
 
