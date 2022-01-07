@@ -9,6 +9,7 @@ import tensorflow as tf
 import numpy as np
 import helper_tf_util
 
+@staticmethod
 def mish(x):
     return x*tf.math.tanh(tf.math.softplus(x))
 
