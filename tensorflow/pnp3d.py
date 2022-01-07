@@ -12,7 +12,7 @@ import helper_tf_util
 def mish(x):
     return x*tf.math.tanh(tf.math.softplus(x))
 
-def encoder_transformer(self, feature, xyz, neigh_idx, name, is_training):
+def PnP3D(self, feature, xyz, neigh_idx, name, is_training):
     d_out = feature.get_shape()[-1].value
     batch_size = tf.shape(feature)[0]
     num_points = tf.shape(feature)[1]
@@ -49,7 +49,7 @@ def encoder_transformer(self, feature, xyz, neigh_idx, name, is_training):
     final_encoding = tf.expand_dims(final_encoding, axis=2)
 
     final_encoding = final_encoding + f_encoding_1 + f_encoding_2
-    final_encoding = helper_tf_util.conv2d(final_encoding, d_out, [1, 1], name + 'mlp2', [1, 1], 'VALID', True, is_training)
+    final_encoding = helper_tf_util.conv2d(final_encoding, d_out, [1, 1], name + 'conv_up', [1, 1], 'VALID', True, is_training)
 
     # Mish Activation
     f_out = self.mish(f_encoding-final_encoding)
