@@ -49,3 +49,7 @@ def conv2d_simple(inputs,
 def mish(x):
     return x*tf.math.tanh(tf.math.softplus(x))
 ```
+and create PnP-3D module as:
+```
+
+```
